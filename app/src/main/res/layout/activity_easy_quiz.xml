@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".EasyQuizActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FFFFFF"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/backbtn"
+            android:layout_width="14dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill|top|left"
+            android:layout_marginRight="15dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:backgroundTintMode="screen"
+            android:hapticFeedbackEnabled="false"
+            android:text="Back"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/easytxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Easy Mode"
+            android:textColor="#000000"
+            android:textSize="48sp" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewAdditionQuestion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Addition Question"
+                android:textSize="18sp" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupAddition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+            <RadioButton
+                android:id="@+id/radioButtonAdditionOption1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Option 1" />
+
+            <RadioButton
+                android:id="@+id/radioButtonAdditionOption2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Option 2" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/textViewSubtractionQuestion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="Subtraction Question"
+                android:textSize="18sp" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupAddition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+            <RadioButton
+                android:id="@+id/radioButtonSubtractionOption1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Option 1" />
+
+            <RadioButton
+                android:id="@+id/radioButtonSubtractionOption2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Option 2" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/textViewMultiplicationQuestion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="Multiplication Question"
+                android:textSize="18sp" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupAddition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+            <RadioButton
+                android:id="@+id/radioButtonMultiplicationOption1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Option 1" />
+
+            <RadioButton
+                android:id="@+id/radioButtonMultiplicationOption2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Option 2" />
+
+            </RadioGroup>
+            <TextView
+                android:id="@+id/textViewDivisionQuestion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="Division Question"
+                android:textSize="18sp" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupAddition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+            <RadioButton
+                android:id="@+id/radioButtonDivisionOption1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Option 1" />
+
+            <RadioButton
+                android:id="@+id/radioButtonDivisionOption2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Option 2" />
+
+            </RadioGroup>
+            <Button
+                android:id="@+id/buttonSubmit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="Submit" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

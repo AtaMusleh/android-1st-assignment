@@ -53,26 +53,30 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Addition Question"
-                android:textSize="18sp" />
+                android:textColor="#090909"
+                android:textSize="24sp" />
 
             <RadioGroup
-                android:id="@+id/radioGroupAddition"
+                android:id="@+id/radioGroupAddition1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
-            <RadioButton
-                android:id="@+id/radioButtonAdditionOption1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="Option 1" />
 
-            <RadioButton
-                android:id="@+id/radioButtonAdditionOption2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="Option 2" />
+                <RadioButton
+                    android:id="@+id/radioButtonAdditionOption1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Option 1"
+                    android:textSize="20sp" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonAdditionOption2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Option 2"
+                    android:textSize="20sp" />
             </RadioGroup>
 
             <TextView
@@ -81,26 +85,30 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
                 android:text="Subtraction Question"
-                android:textSize="18sp" />
+                android:textColor="#090909"
+                android:textSize="24sp" />
 
             <RadioGroup
-                android:id="@+id/radioGroupAddition"
+                android:id="@+id/radioGroupAddition2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
-            <RadioButton
-                android:id="@+id/radioButtonSubtractionOption1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="Option 1" />
 
-            <RadioButton
-                android:id="@+id/radioButtonSubtractionOption2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="Option 2" />
+                <RadioButton
+                    android:id="@+id/radioButtonSubtractionOption1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Option 1"
+                    android:textSize="20sp" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonSubtractionOption2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Option 2"
+                    android:textSize="20sp" />
 
             </RadioGroup>
 
@@ -110,63 +118,74 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
                 android:text="Multiplication Question"
-                android:textSize="18sp" />
+                android:textSize="24sp"
+                android:textColor="#090909" />
 
             <RadioGroup
-                android:id="@+id/radioGroupAddition"
+                android:id="@+id/radioGroupAddition3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
-            <RadioButton
-                android:id="@+id/radioButtonMultiplicationOption1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="Option 1" />
 
-            <RadioButton
-                android:id="@+id/radioButtonMultiplicationOption2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="Option 2" />
+                <RadioButton
+                    android:id="@+id/radioButtonMultiplicationOption1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Option 1"
+                    android:textSize="20sp" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonMultiplicationOption2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Option 2"
+                    android:textSize="20sp" />
 
             </RadioGroup>
+
             <TextView
                 android:id="@+id/textViewDivisionQuestion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
                 android:text="Division Question"
-                android:textSize="18sp" />
+                android:textColor="#090909"
+                android:textSize="24sp" />
 
             <RadioGroup
-                android:id="@+id/radioGroupAddition"
+                android:id="@+id/radioGroupAddition4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
-            <RadioButton
-                android:id="@+id/radioButtonDivisionOption1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="Option 1" />
 
-            <RadioButton
-                android:id="@+id/radioButtonDivisionOption2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="Option 2" />
+                <RadioButton
+                    android:id="@+id/radioButtonDivisionOption1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Option 1"
+                    android:textSize="20sp" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonDivisionOption2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Option 2"
+                    android:textSize="20sp" />
 
             </RadioGroup>
+
             <Button
                 android:id="@+id/buttonSubmit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp"
-                android:text="Submit" />
+                android:text="Submit"
+                android:textSize="20sp" />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

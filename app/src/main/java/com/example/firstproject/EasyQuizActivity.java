@@ -148,6 +148,10 @@ private String[][] questions = {
     }
 
 private void handleUserResponse() {
+        if(!isQuestionAnswered()){
+            Toast.makeText(this, "Please answer all questions", Toast.LENGTH_SHORT).show();
+            return;
+        }
     String additionAnswer = radioButtonAdditionOption1.isChecked() ? radioButtonAdditionOption1.getText().toString() : radioButtonAdditionOption2.getText().toString();
     String subtractionAnswer = radioButtonSubtractionOption1.isChecked() ? radioButtonSubtractionOption1.getText().toString() : radioButtonSubtractionOption2.getText().toString();
     String multiplicationAnswer = radioButtonMultiplicationOption1.isChecked() ? radioButtonMultiplicationOption1.getText().toString() : radioButtonMultiplicationOption2.getText().toString();
@@ -156,10 +160,10 @@ private void handleUserResponse() {
     AlertDialog.Builder builder = new AlertDialog.Builder(this);
     builder.setTitle("Answers");
 
-    String message = "Addition Answer: " + (additionAnswer.equals(questions[currentQuestionIndex][2]) ? "Correct" : "Wrong")
-            + "\nSubtraction Answer: " + (subtractionAnswer.equals(questions[currentQuestionIndex + 1][1]) ? "Correct" : "Wrong")
-            + "\nMultiplication Answer: " + (multiplicationAnswer.equals(questions[currentQuestionIndex + 2][1]) ? "Correct" : "Wrong")
-            + "\nDivision Answer: " + (divisionAnswer.equals(questions[currentQuestionIndex + 3][1]) ? "Correct" : "Wrong");
+    String message = "First Question: " + (additionAnswer.equals(questions[currentQuestionIndex][2]) ? "Correct" : "Wrong")
+            + "\nSecond Question: " + (subtractionAnswer.equals(questions[currentQuestionIndex + 1][1]) ? "Correct" : "Wrong")
+            + "\nThird Question: " + (multiplicationAnswer.equals(questions[currentQuestionIndex + 2][1]) ? "Correct" : "Wrong")
+            + "\nFourth Question: " + (divisionAnswer.equals(questions[currentQuestionIndex + 3][1]) ? "Correct" : "Wrong");
 
     builder.setMessage(message);
 
@@ -172,16 +176,7 @@ private void handleUserResponse() {
 
     builder.setNegativeButton("Restart", new DialogInterface.OnClickListener() {
         public void onClick(DialogInterface dialog, int id) {
-
-            radioButtonAdditionOption1.setChecked(false);
-            radioButtonAdditionOption2.setChecked(false);
-            radioButtonSubtractionOption1.setChecked(false);
-            radioButtonSubtractionOption2.setChecked(false);
-            radioButtonMultiplicationOption1.setChecked(false);
-            radioButtonMultiplicationOption2.setChecked(false);
-            radioButtonDivisionOption1.setChecked(false);
-            radioButtonDivisionOption2.setChecked(false);
-            //currentQuestionIndex = 0;
+            resetRadioButtons();
             dialog.dismiss();
 
         }
@@ -190,5 +185,21 @@ private void handleUserResponse() {
     AlertDialog dialog = builder.create();
     dialog.show();
 }
+    private boolean isQuestionAnswered() {
+        return (radioButtonAdditionOption1.isChecked() || radioButtonAdditionOption2.isChecked())
+                && (radioButtonSubtractionOption1.isChecked() || radioButtonSubtractionOption2.isChecked())
+                && (radioButtonMultiplicationOption1.isChecked() || radioButtonMultiplicationOption2.isChecked())
+                && (radioButtonDivisionOption1.isChecked() || radioButtonDivisionOption2.isChecked());
+    }
+    private void resetRadioButtons() {
+        radioButtonAdditionOption1.setChecked(false);
+        radioButtonAdditionOption2.setChecked(false);
+        radioButtonSubtractionOption1.setChecked(false);
+        radioButtonSubtractionOption2.setChecked(false);
+        radioButtonMultiplicationOption1.setChecked(false);
+        radioButtonMultiplicationOption2.setChecked(false);
+        radioButtonDivisionOption1.setChecked(false);
+        radioButtonDivisionOption2.setChecked(false);
+    }
 
 }

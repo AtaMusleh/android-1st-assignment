@@ -58,7 +58,7 @@
 
 
             <RadioGroup
-                android:id="@+id/radioGroupAddition1"
+                android:id="@+id/radioGroupAddition"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
@@ -99,7 +99,7 @@
                 android:textSize="24sp" />
 
             <RadioGroup
-                android:id="@+id/radioGroupAddition2"
+                android:id="@+id/radioGroupSubtraction"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
@@ -140,7 +140,7 @@
                 android:textSize="24sp" />
 
             <RadioGroup
-                android:id="@+id/radioGroupAddition3"
+                android:id="@+id/radioGroupMultiplication"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
@@ -181,7 +181,7 @@
                 android:textSize="24sp" />
 
             <RadioGroup
-                android:id="@+id/radioGroupAddition4"
+                android:id="@+id/radioGroupDivision"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">

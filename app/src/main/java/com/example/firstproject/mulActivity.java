@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.MediaController;
 import android.widget.VideoView;
 
 import androidx.activity.EdgeToEdge;
@@ -17,6 +18,7 @@ import androidx.core.view.WindowInsetsCompat;
 public class mulActivity extends AppCompatActivity {
     Button backbtn;
     VideoView videoView;
+    private int pauseVid;
     private static final String TAG = "mulActivity";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,14 +43,14 @@ public class mulActivity extends AppCompatActivity {
         Uri uri = Uri.parse(videoPath);
         videoView.setVideoURI(uri);
 
+        MediaController mediaController = new MediaController(this);
+        mediaController.setAnchorView(videoView);
+        videoView.setMediaController(mediaController);
+
         videoView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (videoView.isPlaying()) {
-                    videoView.pause();
-                } else {
-                    videoView.start();
-                }
+                mediaController.show();
             }
         });
 
@@ -62,12 +64,18 @@ public class mulActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
+        if (pauseVid != 0) {
+            videoView.seekTo(pauseVid);
+            videoView.start();
+        }
         Log.d(TAG, "onResume: Activity resumed");
     }
 
     @Override
     protected void onPause() {
         super.onPause();
+        pauseVid = videoView.getCurrentPosition();
+        videoView.pause();
         Log.d(TAG, "onPause: Activity paused");
     }
 
